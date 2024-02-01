@@ -28,15 +28,15 @@ const Home = () => {
     return (
         <div className='w-[100%] h-[100%] pb-10 flex flex-col items-center gap-[50px] bg-yellow-100 '>
             <Header />
-            <div className='w-[80%] flex flex-col items-center gap-[48px]'>
-                <h1 className='text-[30px] font-semibold'>Show Details</h1>
-                <div class="flex flex-col w-full p-10 bg-white rounded-xl border-yellow-400 border-8">
-                    <div class="-m-1.5 overflow-x-auto border-4 rounded-xl border-yellow-400 shadow-yellow-400 shadow-sm">
-                        <div class="p-1.5 min-w-full inline-block align-middle">
+            <div className='w-[95%] flex flex-col items-center gap-[16px]'>
+                <h1 className='text-[30px] text-yellow-700 font-semibold'>Show Details</h1>
+                <div class="flex flex-col w-full p-2 bg-white rounded-xl border-yellow-400 border-4">
+                    <div class="-m-1.5 overflow-x-auto rounded-xl border-yellow-400 shadow-yellow-400 shadow-sm">
+                        <div class="p-1 min-w-full inline-block align-middle">
                             <div class="overflow-hidden">
-                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700 border border-slate-900">
+                                <table class="min-w-full divide-y divide-yellow-200 dark:divide-yellow-700 border border-yellow-900">
                                     <thead>
-                                        <tr className=''>
+                                        <tr>
                                             <th scope="col" class="px-6 py-3 text-start text-lg font-bold text-gray-500 uppercase">Sr. No.</th>
                                             <th scope="col" class="px-6 py-3 text-start text-lg font-bold text-gray-500 uppercase">URL</th>
                                             <th scope="col" class="px-6 py-3 text-start text-lg font-bold text-gray-500 uppercase">Name</th>
@@ -45,7 +45,7 @@ const Home = () => {
                                             <th scope="col" class="px-6 py-3 text-end text-lg font-bold text-gray-500 uppercase">Summary</th>
                                         </tr>
                                     </thead>
-                                    <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+                                    <tbody class="divide-y divide-yellow-200 dark:divide-yellow-700">
                                         {data.map((d, i) => (
                                             <tr key={i} class="hover:bg-yellow-300 hover:font-bold font-semibold">
                                                 <td class="px-6 py-4 whitespace-nowrap text-base text-gray-800 ">{i + 1}</td>

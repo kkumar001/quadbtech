@@ -40,11 +40,12 @@ const Summary = () => {
     const htmlText = `${summary ? summary.show.summary : "Loading..."}`;
 
     return (
-        <div className='w-[100%] h-[100vh] pb-10 flex flex-col items-center gap-[50px] bg-yellow-100'>
+        <div className='h-[100%] flex flex-col items-center justify-between gap-10 pb-4'>
             <Header />
-            <div className='w-[80%] h-[60%] flex flex-col items-center justify-center gap-[48px]'>
-              <h1 className='text-3xl font-semibold text-yellow-700'>Summary || {summary ? summary.show.name : "Loading..."}</h1>
-              <div className="text-[20px] text-center bg-white p-10 rounded-xl border-4 shadow-yellow-300 shadow-xl border-yellow-400" dangerouslySetInnerHTML={{ __html: htmlText }} />
+            {(summary && summary.show.image) ? <img className='w-[225px] rounded-lg' src={summary.show.image.original}/> : ""}
+            <div className='w-[100%] h-auto pb-10 flex flex-col items-center gap-[50px]'>
+                <h1 className='text-3xl font-semibold text-yellow-700'>Summary || {summary ? summary.show.name : "Loading..."}</h1>
+                <div className="text-[20px] w-[80%] text-justify bg-yellow-50 p-5 rounded-xl border-4 shadow-yellow-300 shadow-xl border-yellow-400" dangerouslySetInnerHTML={{ __html: htmlText }} />
             </div>
         </div>
     );
